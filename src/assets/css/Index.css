@@ -1,0 +1,382 @@
+body {
+    font-family: var(--fontBody);
+    font-size: var(--fs-base);
+    color: var(--colorPrimary);
+    font-weight: var(--fw-normal);
+    line-height: var(--lh-body);
+    padding: 0px 0px;
+    margin: 0px 0px;
+    cursor: default;
+}
+* {
+    box-sizing: border-box;
+    transition: var(--transition);
+}
+a,
+input,
+button {
+    text-decoration: none;
+    transition: var(--transition);
+    outline: none !important;
+    box-shadow: none !important;
+}
+a,
+a:hover {
+    color: var(--colorPrimary);
+}
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.lh-body {
+    line-height: var(--lh-body);
+}
+.link {
+    color: inherit;
+    text-decoration: underline;
+}
+.link:hover {
+    color: inherit;
+    text-decoration: none;
+}
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--colorPrimary);
+}
+.transition {
+    transition: var(--transition);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: var(--fontHeading);
+    /* font-family: var(--fontBody); */
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+h1,
+.h1 {
+    font-family: var(--fontHeading);
+    font-size: var(--fs-xxl);
+}
+h2,
+.h2 {
+    font-size: var(--fs-xl);
+}
+h3,
+.h3 {
+    font-size: var(--fs-lg);
+}
+h4,
+.h4 {
+    font-size: var(--fs-md);
+}
+h5,
+.h5 {
+    font-size: var(--fs-sm);
+}
+h6,
+.h6 {
+    font-size: var(--fs-xs);
+}
+
+.fs-1 {
+    font-size: var(--fs-xxl) !important;
+}
+.fs-2 {
+    font-size: var(--fs-xl) !important;
+}
+.fs-3 {
+    font-size: var(--fs-lg) !important;
+}
+.fs-4 {
+    font-size: var(--fs-md) !important;
+}
+.fs-5 {
+    font-size: var(--fs-sm) !important;
+}
+.fs-6 {
+    font-size: var(--fs-xs) !important;
+}
+.fs-small {
+    font-size: var(--fs-xxs) !important;
+}
+.fs-xsmall {
+    font-size: var(--fs-xxxs) !important;
+}
+.fs-base {
+    font-size: var(--fs-base) !important;
+}
+.fs-inherit {
+    font-size: inherit !important;
+}
+
+.font-heading {
+    font-family: var(--fontHeading);
+}
+.font-body {
+    font-family: var(--fontBody);
+}
+.font-btn {
+    font-family: var(--fs-btn);
+}
+
+.bg-primary {
+    background-color: var(--colorPrimary) !important;
+}
+.bg-white {
+    background-color: var(--colorWhite) !important;
+}
+.bg-gray {
+    background-color: var(--colorGray) !important;
+}
+.bg-gray2 {
+    background-color: var(--colorGray2) !important;
+}
+
+/* .fw-light {
+    font-weight: var(--fw-light) !important;
+}
+.fw-normal {
+    font-weight: var(--fw-normal) !important;
+}
+.fw-medium {
+    font-weight: var(--fw-medium) !important;
+}
+.fw-bold {
+    font-weight: var(--fw-bold) !important;
+} */
+
+.-mt-1 {
+    margin-top: -0.25rem;
+}
+.-mt-2 {
+    margin-top: -0.5rem;
+}
+.-mt-3 {
+    margin-top: -1rem;
+}
+.-mt-4 {
+    margin-top: -1.5rem;
+}
+.-mt-5 {
+    margin-top: -3rem;
+}
+.-mb-1 {
+    margin-bottom: -0.25rem;
+}
+.-mb-2 {
+    margin-bottom: -0.5rem;
+}
+.-mb-3 {
+    margin-bottom: -1rem;
+}
+.-mb-4 {
+    margin-bottom: -1.5rem;
+}
+.-mb-5 {
+    margin-bottom: -3rem;
+}
+.-ms-1 {
+    margin-left: -0.25rem;
+}
+.-ms-2 {
+    margin-left: -0.5rem;
+}
+.-ms-3 {
+    margin-left: -1rem;
+}
+.-ms-4 {
+    margin-left: -1.5rem;
+}
+.-ms-5 {
+    margin-left: -3rem;
+}
+.-me-1 {
+    margin-right: -0.25rem;
+}
+.-me-2 {
+    margin-right: -0.5rem;
+}
+.-me-3 {
+    margin-right: -1rem;
+}
+.-me-4 {
+    margin-right: -1.5rem;
+}
+.-me-5 {
+    margin-right: -3rem;
+}
+
+::selection {
+    background-color: var(--colorSecondary);
+    color: var(--colorWhite);
+}
+ul {
+}
+ul li {
+}
+p {
+}
+p:last-child {
+    margin-bottom: 0px;
+}
+p:empty {
+    display: none;
+}
+b,
+strong {
+    font-family: var(--fontBlack);
+    font-weight: normal;
+}
+.text-hover-underline:hover {
+    text-decoration: underline;
+}
+
+.flex-1 {
+    flex: 1;
+}
+.min-w-auto {
+    min-width: inherit !important;
+}
+
+.object-contain {
+    object-fit: contain;
+}
+.object-cover {
+    object-fit: cover;
+}
+.z-index {
+    z-index: var(--z-index);
+}
+.z-index-1 {
+    z-index: var(--z-index-1);
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.column-ps {
+    padding-left: var(--columnPaddingLeft);
+}
+.column-pe {
+    padding-right: var(--columnPaddingRight);
+}
+.row-ms {
+    margin-left: var(--columnMarginLeft);
+}
+.row-me {
+    margin-right: var(--columnMarginRight);
+}
+
+#root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#root > * {
+    width: 100%;
+}
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+    --bs-gutter-x: 3rem;
+    /* --bs-gutter-x: 2.5rem; */
+}
+
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm,
+.container {
+    width: 100%;
+    max-width: 1160px;
+}
+
+.bg-primary.text-white p a {
+    color: inherit;
+}
+.link-text-white a {
+    color: inherit;
+}
+.description-link-underline a {
+    text-decoration: underline;
+}
+
+.form-label {
+    font-size: var(--fs-xs);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+.form-control {
+    background-color: #fff !important;
+    font-family: var(--fontBook);
+    font-size: var(--fs-xxs);
+    color: var(--colorBody);
+    border-color: var(--colorGray2);
+    text-overflow: ellipsis;
+    resize: none;
+    border-radius: 4px;
+    box-shadow: none !important;
+}
+.form-control:focus {
+    border-color: var(--colorGray2);
+}
+.form-error {
+    font-size: var(--fs-xxxs);
+    color: var(--colorDanger);
+    margin-top: 2px;
+}
+
+@media only screen and (min-width: 1400px) {
+    .container-xxl,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        /* max-width: 1160px; */
+    }
+}
+@media only screen and (min-width: 768px) {
+    .btn-min-w {
+        min-width: var(--btnMinWidth);
+    }
+
+    .w-md-auto {
+        width: auto !important;
+    }
+    .h-md-100 {
+        height: 100% !important;
+    }
+    .position-md-absolute {
+        position: absolute;
+    }
+}
+
+/* theme color */
+
+body[class*="dark-mode"] ::selection {
+    color: var(--colorBlack);
+}

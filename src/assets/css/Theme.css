@@ -1,0 +1,8 @@
+[class="dark-mode"] {
+    --colorPrimary: #161517;
+    --colorPrimaryLightText: #a7a7a7;
+    --colorPrimaryHover: rgba(255, 255, 255, 0.9);
+
+    --colorWhite: #000;
+    --colorBlack: #fff;
+}

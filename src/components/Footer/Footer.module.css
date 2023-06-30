@@ -1,0 +1,98 @@
+.footer {
+    font-size: var(--fs-xs);
+    color: var(--colorPrimaryLightText);
+    margin-top: auto;
+    border-top-left-radius: var(--radius-lg);
+    border-top-right-radius: var(--radius-lg);
+}
+.footer a {
+    color: var(--colorPrimaryLightText) !important;
+}
+.footer .top_footer {
+}
+.footer .big_font {
+    display: table;
+}
+.footer .big_font:after {
+    content: "";
+    background-color: var(--colorPrimaryLightText);
+    display: table;
+    margin: 0 auto;
+    width: 0%;
+    height: 5px;
+    transition: var(--transition);
+}
+.footer .big_font:hover:after {
+    width: 100%;
+}
+.footer .social_icons_wrapper {
+}
+.footer .social_icons_wrapper a {
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--colorPrimaryLightText);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+.footer .social_icons_wrapper a:hover {
+    background-color: var(--colorPrimaryLightText);
+    color: var(--colorPrimary) !important;
+}
+
+.footer .middle_footer {
+}
+.footer .bottom_footer {
+}
+
+.footer .blog_list_wrapper {
+}
+.footer .blog_list_wrapper .card {
+}
+.footer .blog_list_wrapper .card .card_link {
+}
+.footer .blog_list_wrapper .card .card_img {
+    width: 102px;
+    height: 75px;
+    object-fit: cover;
+}
+.footer .blog_list_wrapper .card div[class*="card-body"] {
+}
+.footer .blog_list_wrapper .card .card_title {
+    font-size: var(--fs-xs);
+    line-height: inherit;
+}
+
+@media only screen and (max-width: 991px) {
+    .footer .blog_list_wrapper .card .card_img {
+        width: 92px;
+        height: 70px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .footer .blog_list_wrapper .card .card_img {
+        width: 82px;
+        height: 60px;
+    }
+}
+
+/* theme color */
+
+body[class*="dark-mode"] .footer .big_font {
+    color: var(--colorBlack) !important;
+}
+body[class*="dark-mode"] .footer .big_font:after {
+    background-color: var(--colorBlack) !important;
+}
+body[class*="dark-mode"] .footer .social_icons_wrapper a {
+    color: var(--colorBlack) !important;
+    border: 1px solid var(--colorBlack);
+}
+body[class*="dark-mode"] .footer .social_icons_wrapper a:hover {
+    background-color: var(--colorBlack);
+    color: var(--colorWhite) !important;
+}

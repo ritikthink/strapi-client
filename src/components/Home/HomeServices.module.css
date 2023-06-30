@@ -1,0 +1,15 @@
+.services_wrapper {
+}
+.services_wrapper .service_box {
+}
+
+@media only screen and (max-width: 575px) {
+    .services_wrapper .service_box {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 374px) {
+    .services_wrapper .service_box {
+        width: 100%;
+    }
+}

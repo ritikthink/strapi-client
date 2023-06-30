@@ -1,0 +1,52 @@
+.wave_wrapper {
+    height: 150px;
+}
+.hero_min_h {
+    min-height: 717px;
+}
+.skeleton_hero_img {
+    width: 300px !important;
+    height: 300px;
+}
+
+@media only screen and (max-width: 1199px) {
+    .wave_wrapper {
+        height: 100px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .hero_img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 50%;
+    }
+    .hero_min_h {
+        min-height: inherit;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .hero_img {
+        width: 250px;
+        height: 250px;
+    }
+    .skeleton_hero_img {
+        width: 250px !important;
+        height: 250px;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .wave_wrapper {
+        height: 50px;
+    }
+}
+
+/* theme color */
+
+body[class*="dark-mode"] section[class*="bg-primary"] {
+    background-color: #252525 !important;
+}
+body[class*="dark-mode"] .hero_img {
+    filter: grayscale(1);
+}

@@ -1,0 +1,230 @@
+.header {
+}
+.header .navbar {
+    gap: 1rem;
+}
+.header .navbar > * {
+    padding: 0rem 0rem;
+    margin: 0rem 0rem;
+}
+.header .navbar_toggler {
+    width: 28px;
+    height: 18px;
+}
+
+.header .navbar_toggler[class*="collapsed"] span {
+    width: 100%;
+}
+.header .navbar_toggler[class*="collapsed"] span[class="top"] {
+    top: 0px;
+    left: 0px;
+    transform: none;
+}
+.header .navbar_toggler[class*="collapsed"] span[class="middle"] {
+    width: 100%;
+}
+.header .navbar_toggler[class*="collapsed"] span[class="bottom"] {
+    bottom: 0px;
+    left: 0px;
+    transform: none;
+}
+
+.header .navbar_toggler span {
+    background-color: var(--colorPrimary);
+    width: 85%;
+    height: 2px;
+    position: absolute;
+    transition: var(--transition);
+}
+.header .navbar_toggler span[class="top"] {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.header .navbar_toggler span[class="middle"] {
+    width: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header .navbar_toggler span[class="bottom"] {
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+.header .logo {
+    padding: 0rem 0rem !important;
+    margin: 0rem 0rem;
+}
+.header .logo img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 50px;
+    height: auto;
+    transition: var(--transition);
+}
+
+.header a {
+    font-size: var(--fs-sm);
+    color: var(--colorPrimary);
+    line-height: normal;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem !important;
+    transition: var(--transition);
+}
+
+.header .menu_wrapper > a[class*="active"] {
+    color: var(--colorPrimary);
+    font-weight: var(--fw-bold);
+}
+.header .menu_wrapper > a[class*="nav-link-contact"] {
+    background-color: var(--colorPrimary);
+    color: var(--colorWhite);
+    font-weight: var(--fw-normal);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: var(--bs-border-radius-sm);
+}
+.header .menu_wrapper > a[class*="nav-link-contact"]:hover {
+    background-color: var(--colorPrimaryHover);
+}
+.header .social_icons_wrapper {
+    margin-right: -1rem;
+}
+.header .social_icons_wrapper > a {
+    font-size: var(--fs-btn);
+}
+.header .social_icons_wrapper > a svg,
+.header .social_icons_wrapper > a svg * {
+    transition: none;
+}
+
+@media only screen and (max-width: 1199px) {
+    .header a {
+        padding: 0.5rem 0.75rem !important;
+    }
+    .header .menu_wrapper > a[class*="nav-link-contact"] {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .header .mobile_nav {
+        background-color: var(--colorWhite);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        z-index: 2;
+    }
+    .header .mobile_contact a {
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+    }
+    .header .toggle_wrapper,
+    .header .mobile_contact {
+        flex: 1;
+    }
+
+    .header .navbar_nav {
+        background-color: var(--colorWhite);
+        display: flex !important;
+        flex-wrap: wrap;
+        padding: 3.5rem 0rem;
+        width: 100%;
+        height: 100% !important;
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        overflow-y: auto;
+        transition: var(--transition);
+    }
+    .header .navbar_nav[class*="collapsing"],
+    .header .navbar_nav[class*="show"] {
+        opacity: 1;
+        visibility: visible;
+    }
+    .header .menu_wrapper {
+        align-items: center;
+        width: 100%;
+    }
+    .header .menu_wrapper > a {
+        font-size: var(--fs-xl);
+        text-align: center;
+        display: table;
+        margin-bottom: 1rem;
+        width: auto;
+        transform: scale(1);
+    }
+    .header .menu_wrapper > a:hover {
+        transform: scale(1.2);
+    }
+    .header .menu_wrapper > a[class*="nav-link-contact"] {
+        background-color: transparent !important;
+        color: var(--colorPrimary);
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .header .menu_wrapper > a[class*="nav-link-contact active"] {
+        color: var(--colorPrimary);
+        font-weight: var(--fw-bold);
+    }
+    .header .social_icons_wrapper {
+        background-color: var(--colorWhite);
+        flex-direction: inherit;
+        justify-content: center;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        width: 100%;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        z-index: 1;
+        box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .header .social_icons_wrapper > a {
+        font-size: var(--fs-md);
+    }
+}
+@media only screen and (max-width: 767px) {
+    .header .menu_wrapper > a {
+        font-size: var(--fs-lg);
+        margin-bottom: 0.25rem;
+    }
+}
+
+/* theme css */
+
+body[class*="dark-mode"] .header .logo img {
+    filter: invert(1) brightness(2);
+}
+body[class*="dark-mode"] .header a {
+    color: var(--colorBlack);
+}
+body[class*="dark-mode"] .header .menu_wrapper > a[class*="active"] {
+    color: var(--colorBlack);
+}
+body[class*="dark-mode"] .header .menu_wrapper > a[class*="nav-link-contact"] {
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
+}
+body[class*="dark-mode"]
+    .header
+    .menu_wrapper
+    > a[class*="nav-link-contact"]:hover {
+    background-color: var(--colorPrimaryHover);
+}
+body[class*="dark-mode"] .header .navbar_toggler span {
+    background-color: var(--colorBlack);
+}
+
+@media only screen and (max-width: 991px) {
+    body[class*="dark-mode"] .header .social_icons_wrapper {
+        background-color: var(--colorPrimary);
+    }
+}

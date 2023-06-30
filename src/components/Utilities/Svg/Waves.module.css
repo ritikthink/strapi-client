@@ -1,0 +1,65 @@
+.waves {
+    position: absolute;
+    width: 100%;
+    height: 15vw;
+    max-height: 150px;
+    margin-bottom: 0;
+    top: 0;
+}
+.waves .parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.waves .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.waves .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.waves .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.waves .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@media only screen and (max-width: 1199px) {
+    .waves {
+        height: 100px;
+        max-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .waves {
+        height: 50px;
+        max-height: 50px;
+    }
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/* theme color */
+
+body[class*="dark-mode"] .waves .parallax > use {
+    /* fill: rgb(255 255 255 / 12%); */
+}
+body[class*="dark-mode"] .waves .parallax > use:nth-child(1) {
+    fill: rgba(255, 255, 255, 0.7);
+}
+body[class*="dark-mode"] .waves .parallax > use:nth-child(2) {
+    fill: rgba(255, 255, 255, 0.5);
+}
+body[class*="dark-mode"] .waves .parallax > use:nth-child(3) {
+    fill: rgba(255, 255, 255, 0.3);
+}
